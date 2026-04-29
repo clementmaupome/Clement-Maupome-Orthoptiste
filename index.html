@@ -111,19 +111,15 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  // Coordonnées (84 bis Avenue Albert Bedouce, Toulouse)
-  const lat = 43.6045;
-  const lon = 1.4440;
+  const lat = 43.5869;
+  const lon = 1.4429;
 
-  // Créer la carte
   const map = L.map('map').setView([lat, lon], 16);
 
-  // Fond de carte joli
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap'
   }).addTo(map);
 
-  // Ajouter un point
   L.marker([lat, lon]).addTo(map)
     .bindPopup("84 bis Avenue Albert Bedouce, Toulouse")
     .openPopup();
