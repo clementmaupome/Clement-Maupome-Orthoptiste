@@ -146,6 +146,26 @@
   background: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+    .contact-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-bloc {
+  flex: 1;
+  min-width: 220px;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.contact-bloc h3 {
+  margin-top: 0;
+  color: #678a79;
+}
   </style>
 </head>
 
@@ -239,10 +259,38 @@
 </div>
 
   <div class="card">
-    <h2>Contact</h2>
-    <a class="btn" href="#">Prendre rendez-vous</a>
-  </div>
+  <h2>Contact</h2>
 
+  <div class="contact-container">
+
+    <!-- Téléphone -->
+    <div class="contact-bloc">
+      <h3>📞 Téléphone</h3>
+      <p>06 62 29 31 77</p>
+      <a class="btn-call" href="tel:0662293177">
+        Appeler
+      </a>
+    </div>
+
+    <!-- Doctolib -->
+    <div class="contact-bloc">
+      <h3>📅 Rendez-vous</h3>
+      <p>Prise de rendez-vous en ligne</p>
+      <a class="btn-doctolib" href="https://www.doctolib.fr/orthoptiste/toulouse/clement-maupome" target="_blank">
+        Doctolib
+      </a>
+    </div>
+
+    <!-- Mail -->
+    <div class="contact-bloc">
+      <h3>✉️ Email</h3>
+      <p>orthoptiste.maupome@outlook.fr</p>
+      <a class="btn-mail" href="mailto:orthoptiste.maupome@outlook.fr">
+        Envoyer
+      </a>
+    </div>
+
+  </div>
 </div>
 
 <footer>
