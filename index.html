@@ -1,58 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Clément Maupomé - Orthoptiste - Saouzelong Rangueil Toulouse</title>
+  <meta charset="utf-8" />
+  <title>Clément Maupomé - Orthoptiste</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f7fa;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f6f8;
+      color: #2c2c2c;
     }
 
+    /* HEADER */
     header {
-      background-color: #678a79;
+      background: linear-gradient(135deg, #678a79, #4f6d60);
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-item {
+      position: relative;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
       background: white;
-      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 10px;
     }
 
-    h1 {
-      margin: 0;
+    .dropdown div {
+      padding: 8px 12px;
+      white-space: nowrap;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
     }
 
     h2 {
       color: #678a79;
     }
 
-    .section {
-      margin-bottom: 30px;
+    /* MAP */
+    #map {
+      height: 280px;
+      border-radius: 12px;
+      margin-top: 15px;
     }
 
+    /* BUTTON */
     .btn {
       display: inline-block;
-      padding: 10px 15px;
-      background-color: #678a79;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #678a79, #4f6d60);
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      color: #777;
-      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
@@ -60,277 +119,88 @@
 <body>
 
 <header>
-  <h1>Clément Maupomé - Orthoptiste - Saouzelong Rangueil Toulouse</h1>
-  <p>Cabinet d'orthoptie au sein de l'Espace Santé Saouzelong Canal</p>
+  <h1>Clément Maupomé</h1>
+  <p>Orthoptiste à Toulouse</p>
 </header>
+
+<nav>
+  <div class="nav-item">1
+    <div class="dropdown">
+      <div>Sous 1</div>
+      <div>Sous 2</div>
+      <div>Sous 3</div>
+    </div>
+  </div>
+  <div class="nav-item">2
+    <div class="dropdown">
+      <div>Sous 1</div>
+      <div>Sous 2</div>
+      <div>Sous 3</div>
+    </div>
+  </div>
+  <div class="nav-item">3
+    <div class="dropdown">
+      <div>Sous 1</div>
+      <div>Sous 2</div>
+      <div>Sous 3</div>
+    </div>
+  </div>
+  <div class="nav-item">4
+    <div class="dropdown">
+      <div>Sous 1</div>
+      <div>Sous 2</div>
+      <div>Sous 3</div>
+    </div>
+  </div>
+  <div class="nav-item">5
+    <div class="dropdown">
+      <div>Sous 1</div>
+      <div>Sous 2</div>
+      <div>Sous 3</div>
+    </div>
+  </div>
+</nav>
 
 <div class="container">
 
-  <div class="section">
+  <div class="card">
     <h2>Présentation</h2>
-    <p>
-      Bienvenue sur le site du <strong style="color:#33453c;">cabinet d'orthoptie de l'Espace Santé Saouzelong Canal</strong>. 
-    </p>
-    <p> J'ai le plaisir de vous accueillir dans un cadre calme et bienveillant, pensé pour favoriser une prise en charge visuelle attentive et de qualité. </p>
-    <p> Votre vision mérite une attention toute particulière </p>
-<p>Le cabinet d’orthoptie est équipé pour <strong style="color:#33453c;"> dépister, rééduquer et accompagner chaque trouble visuel, </strong> avec une prise en charge personnalisée adaptée à chacun. </p>
-    <P>Dès l’âge de <strong style="color:#33453c;">9 mois</strong>, le dépistage visuel de l’enfant est réalisé grâce à un <strong style="color:#33453c;">matériel adapté aux plus petits </strong> </P>
-    <P>L’asthénopie et les troubles visuels associés sont également pris en charge, notamment <strong style="color:#33453c;">la fatigue visuelle, les maux de tête, les difficultés de concentration ou la gêne en vision prolongée,</strong> grâce à une évaluation précise et une rééducation adaptée.</P>
-    <P>Les personnes âgées sont également accompagnées dans <strong style="color:#33453c;">la rééducation des pathologies oculaires liées au vieillissement</strong>, afin de préserver le confort visuel et l’autonomie au quotidien.</P>
-    <P>Un accompagnement spécialisé est proposé pour <strong style="color:#33453c;">les troubles du neurodéveloppement — autisme, TDAH et troubles DYS —</strong> ainsi que pour <strong style="color:#33453c;">les difficultés d’apprentissage</strong>, avec une prise en charge personnalisée adaptée à chaque profil.</P>
-    <P>Enfin, Un bilan réfractif est possible afin d’évaluer avec précision la vision et de permettre <strong style="color:#33453c;">la prescription ou le renouvellement de corrections optiques</strong> lorsque cela est nécessaire, dans le cadre réglementaire en vigueur.</P>
+    <p>Cabinet d'orthoptie moderne avec prise en charge personnalisée.</p>
   </div>
 
-  <div class="section">
+  <div class="card">
     <h2>Adresse</h2>
-    <p>84 bis Avenue Albert Bedouce<br>31400 Toulouse</p>
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <title>Carte</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p>84 bis Avenue Albert Bedouce<br>Toulouse</p>
+    <div id="map"></div>
+  </div>
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <div class="card">
+    <h2>Contact</h2>
+    <a class="btn" href="#">Prendre rendez-vous</a>
+  </div>
 
-  <style>
-    body {
-      margin: 0;
-    }
-    #map {
-      height: 80vh;
-    }
-  </style>
-</head>
-<body>
+</div>
 
-<div id="map"></div>
+<footer>
+  © 2026 Clément Maupomé
+</footer>
 
-<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  const lat = 43,58060;
-  const lon = 1,46146;
+  const lat = 43.5869;
+  const lon = 1.4429;
 
-  const map = L.map('map').setView([lat, lon], 16);
+  const map = L.map('map').setView([lat, lon], 17);
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap'
   }).addTo(map);
 
   L.marker([lat, lon]).addTo(map)
-    .bindPopup("84 bis Avenue Albert Bedouce, Toulouse")
+    .bindPopup("Cabinet")
     .openPopup();
 </script>
-
-</body>
-</html>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Doctolib : https://www.doctolib.fr/orthoptiste/toulouse/clement-maupome</p>
-    <a class="btn-doctolib" href="https://www.doctolib.fr/orthoptiste/toulouse/clement-maupome" target="_blank" rel="noopener">
-  <img src="https://www.doctolib.fr/favicon.ico" alt="Doctolib" class="doctolib-icon">
-  Prendre rendez-vous sur Doctolib
-</a>
-
-<style>
-.btn-doctolib {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  border-radius: 14px;
-  background: rgba(103, 138, 121, 0.92);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.2px;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-doctolib::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
-  );
-  transition: 0.6s;
-}
-
-.btn-doctolib:hover::before {
-  left: 100%;
-}
-
-.btn-doctolib:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-.btn-doctolib:active {
-  transform: translateY(0px);
-}
-
-.doctolib-icon {
-  width: 18px;
-  height: 18px;
-}
-</style>
-    <p>Téléphone : 06 62 29 31 77</p>
-    <a class="btn-call" href="tel:0662293177">
-  <span class="phone-icon">📞</span>
-  Appeler le 06 62 29 31 77
-</a>
-
-<style>
-.btn-call {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  border-radius: 14px;
-  background: rgba(103, 138, 121, 0.92);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.2px;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-call::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
-  );
-  transition: 0.6s;
-}
-
-.btn-call:hover::before {
-  left: 100%;
-}
-
-.btn-call:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-.btn-call:active {
-  transform: translateY(0px);
-}
-
-.phone-icon {
-  font-size: 18px;
-}
-</style>
-    <p>Mail : orthoptiste.maupome@outlook.fr</p>
-<a class="btn-mail" href="mailto:orthoptiste.maupome@outlook.fr">
-  <span class="mail-icon">✉️</span>
-  Envoyer un email
-</a>
-
-<style>
-.btn-mail {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  border-radius: 14px;
-  background: rgba(103, 138, 121, 0.92);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.2px;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-mail::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
-  );
-  transition: 0.6s;
-}
-
-.btn-mail:hover::before {
-  left: 100%;
-}
-
-.btn-mail:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-.btn-mail:active {
-  transform: translateY(0px);
-}
-
-.mail-icon {
-  font-size: 18px;
-}
-</style>
-  </div>
-
-</div>
-
-<footer>
-  ©️ 2026 Maupomé Clément - Orthoptiste – Toulouse
-</footer>
 
 </body>
 </html>
