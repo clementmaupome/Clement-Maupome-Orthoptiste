@@ -84,6 +84,53 @@
   <div class="section">
     <h2>Adresse</h2>
     <p>84 bis Avenue Albert Bedouce<br>31400 Toulouse</p>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Carte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    body {
+      margin: 0;
+    }
+    #map {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Coordonnées (84 bis Avenue Albert Bedouce, Toulouse)
+  const lat = 43.6045;
+  const lon = 1.4440;
+
+  // Créer la carte
+  const map = L.map('map').setView([lat, lon], 16);
+
+  // Fond de carte joli
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+
+  // Ajouter un point
+  L.marker([lat, lon]).addTo(map)
+    .bindPopup("84 bis Avenue Albert Bedouce, Toulouse")
+    .openPopup();
+</script>
+
+</body>
+</html>
   </div>
 
   <div class="section">
