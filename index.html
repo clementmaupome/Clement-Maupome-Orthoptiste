@@ -121,6 +121,7 @@
 <header>
   <h1>Clément Maupomé</h1>
   <p>Orthoptiste à Toulouse</p>
+  <p>Espace santé Saouzelong Canal - MSP Rangueil Saouzelong</p>
 </header>
 
 <nav>
@@ -169,10 +170,40 @@
   </div>
 
   <div class="card">
-    <h2>Adresse</h2>
-    <p>84 bis Avenue Albert Bedouce<br>Toulouse</p>
-    <div id="map"></div>
+  <h2>Adresse</h2>
+
+  <div class="adresse-container">
+
+    <!-- Adresse -->
+    <div class="adresse-bloc">
+      <p>
+      📍 84 bis Avenue Albert Bedouce<br>
+        31400 Toulouse
+      </p>
+
+      <div id="map"></div>
+    </div>
+
+    <!-- Transports -->
+    <div class="transport-bloc">
+      <h3>Accès</h3>
+
+      <div class="transport-item">
+        🚇 Métro - Saouzelong (ligne B)
+      </div>
+
+      <div class="transport-item">
+        🚌 Bus - Saouzelong (ligne 44)
+      </div>
+
+      <div class="transport-item">
+        🚌 Bus - Marine (ligne 27)
+      </div>
+
+    </div>
+
   </div>
+</div>
 
   <div class="card">
     <h2>Contact</h2>
@@ -188,8 +219,8 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  const lat = 43.5869;
-  const lon = 1.4429;
+  const lat = 43.58060;
+  const lon = 1.46146;
 
   const map = L.map('map').setView([lat, lon], 17);
 
