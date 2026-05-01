@@ -64,10 +64,10 @@ ul {
 }
 
 .photo {
-  width: 20%;
-  max-width: 100px;
+  width: 100%;
+  max-width: 280px;
   display: block;
-  margin: 15px auto;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
