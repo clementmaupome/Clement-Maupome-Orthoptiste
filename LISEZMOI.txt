@@ -9,26 +9,11 @@ Dans le dépôt GitHub « Clement-Maupome-Orthoptiste » :
   - ce fichier LISEZMOI.txt peut être supprimé ou laissé, il n'apparaît pas sur le site.
 Puis dans Google Search Console : Sitemaps > ajouter « sitemap.xml ».
 
-2. À COMPLÉTER (surligné en jaune pointillé sur le site)
---------------------------------------------------------
-Cherche  class="todo"  dans les fichiers. Une fois le texte corrigé,
-remplace  <mark class="todo">ton texte</mark>  par  ton texte  tout simplement.
+2. TEXTES
+---------
+Tout est complété. Pour modifier un texte, demande-moi : je régénère toutes les pages d'un coup.
 
-  infos-pratiques.html   horaires (6 jours), parking, chèque/espèces, durée bilan/séance
-  index.html             durée du bilan (étape 3)
-  autisme-tsa.html       aménagements de la consultation (4 lignes à garder/supprimer),
-                         âge minimum, diagnostic nécessaire ou non, durée
-  troubles-apprentissages-dys.html, depistage-bebe-enfant.html,
-  vision-binoculaire.html  durée du bilan
-  basse-vision.html      séquelles d'AVC : à garder seulement si tu le prends en charge
-  mentions-legales.html  SIRET de l'EI
-
-Quand tu auras les horaires : les ajouter aussi dans le bloc schema.org
-de index.html et infos-pratiques.html, juste après la ligne "email" :
-  "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday"], "opens": "08:30", "closes": "19:00"}
-  ],
-(ou envoie-moi tes horaires, je le fais).
+Les horaires sont déjà renseignés pour Google (bloc schema.org). S'ils changent, préviens-moi.
 
 3. SI TU PRENDS UN NOM DE DOMAINE
 ---------------------------------

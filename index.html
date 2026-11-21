@@ -1,39 +1,424 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="google-site-verification" content="JBeGsLebnPOSnF8G-VZUhZsyDzw1wFmwWThBuGcAPfw">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Orthoptiste à Toulouse – Clément Maupomé | Site en cours de refonte</title>
-  <meta name="description" content="Clément Maupomé, orthoptiste à Toulouse (Espace de Santé Saouzelong Canal). Le site est en cours de refonte : prise de rendez-vous sur Doctolib ou au 06 62 29 31 77.">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{min-height:100vh;display:grid;place-items:center;padding:2rem 1.2rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#fff;line-height:1.6;
-      background:radial-gradient(900px 400px at 85% 0%,#2f5a3e 0%,transparent 60%),linear-gradient(135deg,#2A4D35,#1C3425)}
-    main{max-width:560px;text-align:center}
-    .eyes{display:flex;justify-content:center;gap:10px;margin-bottom:1.6rem}
-    .eyes svg{width:64px;height:64px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
-    .eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#AECCB0;margin-bottom:.6rem}
-    h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.15;margin-bottom:1rem}
-    p.lead{color:#D6E5D7;margin-bottom:2rem}
-    .btn{display:inline-block;background:#E8A353;color:#1C3425;font-weight:600;text-decoration:none;padding:.85rem 1.9rem;border-radius:999px;margin:.3rem}
-    .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
-    .info{margin-top:2.2rem;font-size:.92rem;color:#AECCB0}
-    .info a{color:#fff}
-  </style>
+  <title>Orthoptiste Toulouse – Autisme, neurovisuel, vertiges | Maupomé</title>
+  <meta name="description" content="Orthoptiste à Toulouse Saouzelong : trouble du spectre de l'autisme, rééducation neurovisuelle, vertiges, dépistage bébé, basse vision. RDV sur Doctolib.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/">
+  <meta name="google-site-verification" content="JBeGsLebnPOSnF8G-VZUhZsyDzw1wFmwWThBuGcAPfw">
+  <meta name="theme-color" content="#1C3425">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Aperçu quand le lien est partagé (WhatsApp, SMS, Facebook…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Clément Maupomé · Orthoptiste à Toulouse">
+  <meta property="og:title" content="Orthoptiste Toulouse – Autisme, neurovisuel, vertiges | Maupomé">
+  <meta property="og:description" content="Orthoptiste à Toulouse Saouzelong : trouble du spectre de l'autisme, rééducation neurovisuelle, vertiges, dépistage bébé, basse vision. RDV sur Doctolib.">
+  <meta property="og:url" content="https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/">
+  <meta property="og:image" content="https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>try{['a11y-large','a11y-contrast'].forEach(function(c){if(localStorage.getItem(c)==='1')document.documentElement.classList.add(c)})}catch(e){}</script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "MedicalBusiness",
+ "@id": "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/#cabinet",
+ "name": "Cabinet d'Orthoptie de Clément Maupomé",
+ "description": "Orthoptiste à Toulouse : bilan neurovisuel, trouble du spectre de l'autisme, troubles des apprentissages et du neurodéveloppement, dépistage visuel du bébé et de l'enfant, vision binoculaire, troubles neurovisuels acquis, basse vision, correction optique.",
+ "url": "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/",
+ "image": [
+  "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/assets/img/salle-consultation.webp",
+  "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/assets/img/og-image.jpg"
+ ],
+ "logo": "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/apple-touch-icon.png",
+ "telephone": "+33662293177",
+ "email": "orthoptiste.maupome@outlook.fr",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "84 bis avenue Albert Bedouce, Espace de Santé Saouzelong Canal",
+  "postalCode": "31400",
+  "addressLocality": "Toulouse",
+  "addressRegion": "Occitanie",
+  "addressCountry": "FR"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 43.5806,
+  "longitude": 1.4615
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Toulouse"
+  },
+  {
+   "@type": "Place",
+   "name": "Saouzelong"
+  },
+  {
+   "@type": "Place",
+   "name": "Rangueil"
+  },
+  {
+   "@type": "Place",
+   "name": "Pont des Demoiselles"
+  },
+  {
+   "@type": "Place",
+   "name": "Saint-Agne"
+  },
+  {
+   "@type": "Place",
+   "name": "Montaudran"
+  }
+ ],
+ "paymentAccepted": "Tiers payant, chèque, espèces, virement bancaire",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Monday",
+   "opens": "09:00",
+   "closes": "20:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+   ],
+   "opens": "09:00",
+   "closes": "19:00"
+  }
+ ],
+ "availableService": [
+  {
+   "@type": "MedicalProcedure",
+   "name": "Bilan neurovisuel"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Bilan visuel adapté au trouble du spectre de l'autisme"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Dépistage visuel du nourrisson et de l'enfant"
+  },
+  {
+   "@type": "MedicalTherapy",
+   "name": "Rééducation de la vision binoculaire"
+  },
+  {
+   "@type": "MedicalTherapy",
+   "name": "Réadaptation basse vision"
+  },
+  {
+   "@type": "MedicalTherapy",
+   "name": "Rééducation des troubles neurovisuels acquis (AVC, traumatisme crânien, tumeur cérébrale)"
+  },
+  {
+   "@type": "MedicalTherapy",
+   "name": "Rééducation visuo-vestibulaire (vertiges, dépendance visuelle, mal des transports)"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Primo-prescription et renouvellement de correction optique"
+  }
+ ],
+ "employee": {
+  "@type": "Person",
+  "@id": "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/#clement-maupome",
+  "name": "Clément Maupomé",
+  "jobTitle": "Orthoptiste",
+  "identifier": {
+   "@type": "PropertyValue",
+   "propertyID": "RPPS",
+   "value": "10010199379"
+  },
+  "image": "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/assets/img/clement-maupome-orthoptiste.webp",
+  "knowsAbout": [
+   "Orthoptie",
+   "Trouble du spectre de l'autisme",
+   "Bilan neurovisuel",
+   "Troubles neurovisuels acquis",
+   "Rééducation visuo-vestibulaire",
+   "Vertiges",
+   "Basse vision",
+   "Vision binoculaire",
+   "Dépistage visuel de l'enfant",
+   "Troubles du neurodéveloppement"
+  ],
+  "hasCredential": [
+   {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Certificat de capacité d'orthoptiste",
+    "credentialCategory": "degree"
+   },
+   {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Diplôme d'Université Troubles du Spectre Autistique : actualisation des connaissances et des pratiques professionnelles",
+    "credentialCategory": "Diplôme d'Université",
+    "recognizedBy": {
+     "@type": "CollegeOrUniversity",
+     "name": "Université Toulouse – Jean Jaurès"
+    }
+   }
+  ]
+ },
+ "sameAs": [
+  "https://www.doctolib.fr/orthoptiste/toulouse/clement-maupome"
+ ],
+ "potentialAction": {
+  "@type": "ReserveAction",
+  "target": "https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&source=external_referral",
+  "name": "Prendre rendez-vous sur Doctolib"
+ }
+}</script>
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Clément Maupomé · Orthoptiste à Toulouse",
+ "url": "https://clementmaupome.github.io/Clement-Maupome-Orthoptiste/",
+ "inLanguage": "fr-FR"
+}</script>
 </head>
 <body>
-  <main>
-    <div class="eyes" aria-hidden="true">
-      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#fff" stroke="#AECCB0" stroke-width="2.5"/><circle cx="32" cy="37" r="17" fill="#1C3425"/><circle cx="40" cy="27" r="6.5" fill="#fff"/><circle cx="38.2" cy="29" r="2.8" fill="#1C3425"/></svg>
-      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#fff" stroke="#AECCB0" stroke-width="2.5"/><circle cx="32" cy="37" r="17" fill="#1C3425"/><circle cx="24" cy="27" r="6.5" fill="#fff"/><circle cx="25.8" cy="29" r="2.8" fill="#1C3425"/></svg>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="masthead">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="title">Clément Maupomé · Orthoptiste</span>
+        <span class="subtitle">Espace de Santé Saouzelong Canal · Toulouse</span>
+      </a>
+      <div class="header-eyes"><svg class="eye" viewBox="0 0 64 64" aria-hidden="true"><defs><clipPath id="eyeL"><circle cx="32" cy="32" r="28.5"/></clipPath></defs><circle cx="32" cy="32" r="30" fill="#fff" stroke="#AECCB0" stroke-width="2.5"/><g clip-path="url(#eyeL)"><g class="pupil"><circle cx="32" cy="37" r="17" fill="#1C3425"/><circle cx="40" cy="27" r="6.5" fill="#fff"/><circle cx="38.2" cy="29" r="2.8" fill="#1C3425"/></g></g></svg><svg class="eye" viewBox="0 0 64 64" aria-hidden="true"><defs><clipPath id="eyeR"><circle cx="32" cy="32" r="28.5"/></clipPath></defs><circle cx="32" cy="32" r="30" fill="#fff" stroke="#AECCB0" stroke-width="2.5"/><g clip-path="url(#eyeR)"><g class="pupil"><circle cx="32" cy="37" r="17" fill="#1C3425"/><circle cx="24" cy="27" r="6.5" fill="#fff"/><circle cx="25.8" cy="29" r="2.8" fill="#1C3425"/></g></g></svg></div>
+      <div class="header-tools">
+        <div class="a11y">
+          <button class="icon-btn a11y-btn" aria-expanded="false" aria-controls="a11y-panel" title="Confort de lecture"><span aria-hidden="true">Aa</span><span class="visually-hidden">Options de confort de lecture</span></button>
+          <div class="a11y-panel" id="a11y-panel">
+            <p>Confort de lecture</p>
+            <button class="switch" data-pref="a11y-large" aria-pressed="false">Texte plus grand <span class="knob" aria-hidden="true"></span></button>
+            <button class="switch" data-pref="a11y-contrast" aria-pressed="false">Contraste renforcé <span class="knob" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <a class="btn btn-rdv btn-sm header-rdv" href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Prendre RDV</a>
+        <button class="icon-btn burger" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="visually-hidden">Menu</span></button>
+      </div>
+    </header>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li class="dd"><button class="dd-btn" aria-expanded="false" aria-controls="dd-specialites">Spécialités</button>
+          <ul class="dd-menu" id="dd-specialites"><li><a href="depistage-bebe-enfant.html">Dépistage visuel du bébé et de l'enfant</a></li><li><a href="troubles-visuels-maux-de-tete.html">Bilan orthoptique et vision binoculaire : troubles visuels, maux de tête et fatigue visuelle</a></li><li><a href="troubles-apprentissages-dys.html">Bilan neurovisuel : troubles du neurodéveloppement et apprentissages</a></li><li><a href="troubles-neurovisuels-acquis.html">Troubles neurovisuels acquis (AVC, trauma crânien…)</a></li><li><a href="vertiges-reeducation-visuo-vestibulaire.html">Vertiges et rééducation visuo-vestibulaire</a></li><li><a href="basse-vision.html">Basse vision</a></li><li><a href="correction-optique.html">Primo-prescription et renouvellement de correction optique</a></li></ul></li>
+        <li class="nav-tsa"><a href="autisme.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 1 0-6 .13 4 4 0 0 0-2.5 5.77 4 4 0 0 0 .55 6.59A4 4 0 1 0 12 18z"/><path d="M12 5a3 3 0 1 1 6 .13 4 4 0 0 1 2.5 5.77 4 4 0 0 1-.55 6.59A4 4 0 1 1 12 18z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.6 6.5a3 3 0 0 0 .4-1.37M6 5.13a3 3 0 0 0 .4 1.37M3.48 10.9a4 4 0 0 1 .58-.4M19.94 10.5a4 4 0 0 1 .58.4M6 18a4 4 0 0 1-1.97-.52M19.97 17.48A4 4 0 0 1 18 18"/></svg>Trouble du spectre de l'autisme</a></li>
+        <li><a href="le-cabinet.html">Le cabinet</a></li>
+        <li><a href="infos-pratiques.html">Infos pratiques &amp; FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main id="contenu">
+    <section class="hero hero-photo">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Espace de Santé Saouzelong Canal · Toulouse</p>
+          <h1>Orthoptiste à Toulouse<br><em>Clément Maupomé</em></h1>
+          <p class="lead">Un bilan visuel adapté à chacun, de la naissance au grand âge, coordonné avec tous vos professionnels de santé.</p>
+          <div class="hero-actions">
+            <a class="btn btn-rdv" href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Prendre rendez-vous sur Doctolib</a>
+            <a class="btn btn-ghost" href="infos-pratiques.html">Infos pratiques &amp; accès</a>
+          </div>
+        </div>
+        <div class="hero-photos" aria-hidden="false">
+          <figure class="polaroid p1"><img src="assets/img/salle-consultation.webp" alt="Salle de consultation du cabinet d'orthoptie" width="250" height="320" fetchpriority="high"><figcaption>Le cabinet</figcaption></figure>
+          <figure class="polaroid p2"><img src="assets/img/clement-maupome-orthoptiste.webp" alt="Clément Maupomé, orthoptiste" width="170" height="220"><figcaption>Clément Maupomé</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickfacts" aria-label="L'essentiel">
+      <ul>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M10.3 8.2h.01M13.7 8.2h.01"/><path d="M10.5 10.2c.9.6 2.1.6 3 0"/><path d="M6.5 21c.4-3.6 2.6-6 5.5-6s5.1 2.4 5.5 6"/></svg> Bilans dès 9 mois</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9 17 20 6"/></svg> Tiers payant, sans avance de frais</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M5 8.5l7 1.5 7-1.5M12 10v4.5l-3.5 6.5M12 14.5l3.5 6.5"/></svg> Accessible PMR, rez-de-chaussée</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8.5 21l2-4M15.5 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg> Métro ligne B, Saouzelong</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="pour-qui">
+      <h2 class="section-title" id="pour-qui">Pour qui ?</h2>
+      <p class="section-intro">Choisissez la situation qui vous concerne pour trouver la bonne information.</p>
+      <div class="who">
+        <div class="who-card">
+          <div class="who-emoji"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M11.5 5.2c-1.2-1.6.2-3.2 1.8-2.4"/><path d="M8.6 12.2q.9-1 1.8 0M13.6 12.2q.9-1 1.8 0"/><path d="M9.5 15.5q2.5 2.2 5 0"/></svg></div>
+          <h3>Bébé et enfant</h3>
+          <p class="age">de 9 mois à 16 ans</p>
+          <ul><li><a href="depistage-bebe-enfant.html">Dépistage visuel : 9 mois, 3–4 ans, 5–6 ans</a></li><li><a href="troubles-apprentissages-dys.html">Bilan neurovisuel : troubles du neurodéveloppement et apprentissages</a></li><li><a href="depistage-bebe-enfant.html#signes">Un œil qui louche ou qui diverge ?</a></li></ul>
+        </div>
+        <div class="who-card">
+          <div class="who-emoji"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 1 0-6 .13 4 4 0 0 0-2.5 5.77 4 4 0 0 0 .55 6.59A4 4 0 1 0 12 18z"/><path d="M12 5a3 3 0 1 1 6 .13 4 4 0 0 1 2.5 5.77 4 4 0 0 1-.55 6.59A4 4 0 1 1 12 18z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.6 6.5a3 3 0 0 0 .4-1.37M6 5.13a3 3 0 0 0 .4 1.37M3.48 10.9a4 4 0 0 1 .58-.4M19.94 10.5a4 4 0 0 1 .58.4M6 18a4 4 0 0 1-1.97-.52M19.97 17.48A4 4 0 0 1 18 18"/></svg></div>
+          <h3>Trouble du spectre de l'autisme</h3>
+          <p class="age">bilan adapté à chaque personne</p>
+          <ul><li><a href="autisme.html#orthoptie">Orthoptie et trouble du spectre de l'autisme</a></li><li><a href="autisme.html#bilan">Le bilan neurovisuel</a></li><li><a href="autisme.html#verbal">Personne verbale</a></li><li><a href="autisme.html#non-verbal">Personne non verbale</a></li></ul>
+        </div>
+        <div class="who-card">
+          <div class="who-emoji"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg></div>
+          <h3>Adulte</h3>
+          <p class="age">à partir de 16 ans</p>
+          <ul><li><a href="troubles-visuels-maux-de-tete.html">Bilan orthoptique et vision binoculaire : troubles visuels, maux de tête et fatigue visuelle</a></li><li><a href="troubles-neurovisuels-acquis.html">Troubles neurovisuels acquis (AVC, trauma crânien, tumeur…)</a></li><li><a href="vertiges-reeducation-visuo-vestibulaire.html">Vertiges, dépendance visuelle, mal des transports</a></li><li><a href="correction-optique.html">Primo-prescription et renouvellement de correction optique</a></li></ul>
+        </div>
+        <div class="who-card">
+          <div class="who-emoji"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3 20.5 20.5"/></svg></div>
+          <h3>Personne en situation de malvoyance</h3>
+          <p class="age">DMLA, glaucome, rétinopathie…</p>
+          <ul><li><a href="basse-vision.html">Bilan et réadaptation basse vision</a></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="domaines">
+      <h2 class="section-title" id="domaines">Domaines de prise en charge et formations</h2>
+      <p class="section-intro">Chaque domaine s'appuie sur un diplôme ou une formation spécifique.</p>
+      <div class="cred-group">
+        <div class="cred">
+          <div class="cred-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
+          <p class="cred-domain">Trouble du spectre de l'autisme</p>
+          <ul class="cred-list"><li>Diplôme d'Université Troubles du Spectre Autistique : actualisation des connaissances et des pratiques professionnelles — Université Toulouse – Jean Jaurès (2026)</li><li>Formation « Autisme et neurovision : la place de l'orthoptiste » (UNRIO)</li></ul>
+          <p class="cred-text">Ces formations permettent de proposer un bilan neurovisuel et une prise en charge adaptés aux personnes présentant un trouble du spectre de l'autisme, verbales ou non verbales.</p>
+        </div>
+        <div class="cards"><a class="card" href="autisme.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 1 0-6 .13 4 4 0 0 0-2.5 5.77 4 4 0 0 0 .55 6.59A4 4 0 1 0 12 18z"/><path d="M12 5a3 3 0 1 1 6 .13 4 4 0 0 1 2.5 5.77 4 4 0 0 1-.55 6.59A4 4 0 1 1 12 18z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.6 6.5a3 3 0 0 0 .4-1.37M6 5.13a3 3 0 0 0 .4 1.37M3.48 10.9a4 4 0 0 1 .58-.4M19.94 10.5a4 4 0 0 1 .58.4M6 18a4 4 0 0 1-1.97-.52M19.97 17.48A4 4 0 0 1 18 18"/></svg></div>
+          <h3>Trouble du spectre de l'autisme</h3>
+          <p>Réfraction, vision binoculaire, vision fonctionnelle et visuo-cognitive, évaluées avec un matériel et une approche adaptés aux particularités sensorielles et perceptives liées au trouble du spectre de l'autisme.</p>
+          <span class="more">En savoir plus →</span>
+        </a></div>
+      </div>
+      <div class="cred-group">
+        <div class="cred">
+          <div class="cred-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
+          <p class="cred-domain">Troubles neurovisuels acquis</p>
+          <ul class="cred-list"><li>Formation « Troubles neurovisuels acquis chez l'adulte – approche pluridisciplinaire » (CADET, 2026)</li></ul>
+          <p class="cred-text">Cette formation permet d'évaluer et de rééduquer les troubles visuels qui suivent une lésion cérébrale, en lien avec l'équipe qui suit le patient.</p>
+        </div>
+        <div class="cards"><a class="card" href="troubles-neurovisuels-acquis.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21v-3.2A7 7 0 1 1 18.3 11l1.7 3.3-1.8.6V17a1.5 1.5 0 0 1-1.5 1.5H15V21"/><path d="M10.2 8.6c.4-1 1.6-1.5 2.6-1.1M10 11.5c1.2.6 2.8.6 4-.2"/></svg></div>
+          <h3>Après un AVC, un traumatisme crânien, une tumeur…</h3>
+          <p>Champ visuel réduit, vision double, négligence d'un côté de l'espace, difficultés de lecture ou de reconnaissance visuelle.</p>
+          <span class="more">En savoir plus →</span>
+        </a></div>
+      </div>
+      <div class="cred-group">
+        <div class="cred">
+          <div class="cred-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
+          <p class="cred-domain">Orthoptie</p>
+          <ul class="cred-list"><li>Certificat de capacité d'orthoptiste — Université de Toulouse (2022)</li></ul>
+          <p class="cred-text">Ce diplôme national permet d'exercer l'ensemble des bilans et rééducations orthoptiques.</p>
+        </div>
+        <div class="cards"><a class="card" href="depistage-bebe-enfant.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M11.5 5.2c-1.2-1.6.2-3.2 1.8-2.4"/><path d="M8.6 12.2q.9-1 1.8 0M13.6 12.2q.9-1 1.8 0"/><path d="M9.5 15.5q2.5 2.2 5 0"/></svg></div>
+          <h3>Dépistage du bébé et de l'enfant</h3>
+          <p>Dès 9 mois, puis à 3–4 ans et 5–6 ans, avec un matériel adapté aux plus jeunes.</p>
+          <span class="more">En savoir plus →</span>
+        </a><a class="card" href="troubles-visuels-maux-de-tete.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg></div>
+          <h3>Bilan orthoptique et vision binoculaire : troubles visuels, maux de tête et fatigue visuelle</h3>
+          <p>Bilan orthoptique et rééducation : vision double ou qui fluctue, maux de tête, fatigue visuelle, vertiges.</p>
+          <span class="more">En savoir plus →</span>
+        </a><a class="card" href="troubles-apprentissages-dys.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7c-2.2-1.4-5-1.7-8-1.2v12c3-.5 5.8-.2 8 1.2 2.2-1.4 5-1.7 8-1.2v-12c-3-.5-5.8-.2-8 1.2zM12 7v12"/></svg></div>
+          <h3>Bilan neurovisuel : troubles du neurodéveloppement et apprentissages</h3>
+          <p>Un examen visuel pour tout trouble du neurodéveloppement (TDAH, dys, TDI…), et un bilan quand la vision pèse sur la lecture, l'écriture ou la copie.</p>
+          <span class="more">En savoir plus →</span>
+        </a><a class="card" href="vertiges-reeducation-visuo-vestibulaire.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c0-.7.6-1.2 1.3-1.1 1 .2 1.5 1.3 1.2 2.3-.5 1.4-2.2 2-3.5 1.4-1.8-.8-2.4-3-1.6-4.7 1-2.2 3.8-3 5.9-1.9 2.6 1.3 3.5 4.6 2.2 7.1-1.6 3-5.5 4.1-8.5 2.5"/></svg></div>
+          <h3>Vertiges et visuo-vestibulaire</h3>
+          <p>Vertiges persistants, dépendance visuelle, mal des transports : rééducation orthoptique de l'équilibre visuel, complétée si besoin par le panneau de Bauwens.</p>
+          <span class="more">En savoir plus →</span>
+        </a><a class="card" href="basse-vision.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3 20.5 20.5"/></svg></div>
+          <h3>Basse vision</h3>
+          <p>Réadaptation visuelle au quotidien : DMLA, glaucome, rétinopathie diabétique, décollement de rétine.</p>
+          <span class="more">En savoir plus →</span>
+        </a><a class="card" href="correction-optique.html">
+          <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="14" r="3.5"/><circle cx="17.5" cy="14" r="3.5"/><path d="M10 14c.7-.6 1.3-.6 2 0"/><path d="M3 14 4.5 7.5M21 14l-1.5-6.5"/></svg></div>
+          <h3>Correction optique</h3>
+          <p>Primo-prescription et renouvellement de correction optique, après un bilan visuel.</p>
+          <span class="more">En savoir plus →</span>
+        </a></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="deroule">
+      <h2 class="section-title" id="deroule">Comment ça se passe ?</h2>
+      <p class="section-intro">De l'ordonnance au suivi, en cinq étapes.</p>
+      <ol class="steps">
+        <li><h3>L'ordonnance</h3><p>Votre médecin prescrit un bilan orthoptique. Pour une primo-prescription ou un renouvellement de correction optique, l'accès direct est possible sous conditions.</p></li>
+        <li><h3>Le rendez-vous</h3><p>En ligne sur <a href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Doctolib</a>, à toute heure, ou par téléphone au <a href="tel:+33662293177">06 62 29 31 77</a>.</p></li>
+        <li><h3>Le bilan</h3><p>Sa durée est adaptée au trouble et à votre demande, dans le respect de la nomenclature de l'Assurance maladie et des recommandations de la HAS.</p></li>
+        <li><h3>Le compte rendu</h3><p>Il est adressé à votre médecin pour coordonner le suivi.</p></li>
+        <li><h3>Les séances</h3><p>Si besoin, une rééducation est proposée, avec un nombre de séances adapté au bilan.</p></li>
+      </ol>
+      <div class="callout" style="margin-top:2rem"><p><strong>À apporter :</strong> l'ordonnance, la carte Vitale, l'attestation de mutuelle si vous en avez une, vos lunettes actuelles et leurs dernières ordonnances, les derniers comptes rendus si vous les avez (ophtalmologiste, autres bilans) et, pour un enfant, son carnet de santé.</p></div>
+    </section>
+
+    <section class="section" aria-labelledby="images">
+      <h2 class="section-title" id="images">Le cabinet en images</h2>
+      <p class="section-intro">Un cabinet lumineux, en rez-de-chaussée, équipé pour tous les âges. <a href="le-cabinet.html">Découvrir le cabinet →</a></p>
+      <div class="gallery">
+        <figure><img src="assets/img/salle-consultation.webp" alt="Salle de consultation" loading="lazy" width="675" height="900"></figure>
+        <figure><img src="assets/img/equipement-orthoptique.webp" alt="Équipement orthoptique" loading="lazy" width="675" height="900"></figure>
+        <figure><img src="assets/img/vue-ensemble.webp" alt="Vue d'ensemble du cabinet" loading="lazy" width="675" height="900"></figure>
+        <figure><img src="assets/img/depistage-pediatrique.webp" alt="Matériel de dépistage pédiatrique" loading="lazy" width="675" height="900"></figure>
+        <figure><img src="assets/img/panneau-bauwens.webp" alt="Panneau panoramique stéréoscopique de Bauwens" loading="lazy" width="675" height="900"></figure>
+      </div>
+    </section>
+    <div class="section">
+      <div class="cta-band">
+        <div><h2>Une prise en charge personnalisée et coordonnée</h2><p>Au sein de l'Espace de Santé Saouzelong Canal, du nourrisson à la personne âgée.</p></div>
+        <a class="btn btn-rdv" href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Prendre rendez-vous</a>
+      </div>
     </div>
-    <p class="eyebrow">Orthoptiste à Toulouse</p>
-    <h1>Clément Maupomé</h1>
-    <p class="lead">Le site fait peau neuve et revient très vite.<br>Le cabinet reste ouvert : vous pouvez prendre rendez-vous normalement.</p>
-    <a class="btn" href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Prendre rendez-vous sur Doctolib</a>
-    <a class="btn ghost" href="tel:+33662293177">06 62 29 31 77</a>
-    <p class="info">84 bis avenue Albert Bedouce, 31400 Toulouse<br>Espace de Santé Saouzelong Canal · Métro B Saouzelong</p>
+
   </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2>Cabinet d'Orthoptie de Clément Maupomé</h2>
+        <p>84 bis avenue Albert Bedouce<br>31400 Toulouse<br>Espace de Santé Saouzelong Canal</p>
+        <p style="margin-top:.7rem"><a href="tel:+33662293177">06 62 29 31 77</a><br><a href="mailto:orthoptiste.maupome@outlook.fr">orthoptiste.maupome@outlook.fr</a></p>
+      </div>
+      <div>
+        <h2>Spécialités</h2>
+        <ul><li><a href="autisme.html">Trouble du spectre de l'autisme</a></li><li><a href="depistage-bebe-enfant.html">Dépistage visuel du bébé et de l'enfant</a></li><li><a href="troubles-visuels-maux-de-tete.html">Bilan orthoptique et vision binoculaire : troubles visuels, maux de tête et fatigue visuelle</a></li><li><a href="troubles-apprentissages-dys.html">Bilan neurovisuel : troubles du neurodéveloppement et apprentissages</a></li><li><a href="troubles-neurovisuels-acquis.html">Troubles neurovisuels acquis (AVC, trauma crânien…)</a></li><li><a href="vertiges-reeducation-visuo-vestibulaire.html">Vertiges et rééducation visuo-vestibulaire</a></li><li><a href="basse-vision.html">Basse vision</a></li><li><a href="correction-optique.html">Primo-prescription et renouvellement de correction optique</a></li></ul>
+      </div>
+      <div>
+        <h2>Le cabinet</h2>
+        <ul>
+          <li><a href="le-cabinet.html">Le cabinet et l'orthoptiste</a></li>
+          <li><a href="infos-pratiques.html">Infos pratiques &amp; accès</a></li>
+          <li><a href="infos-pratiques.html#faq">Questions fréquentes</a></li>
+          <li><a href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Rendez-vous sur Doctolib</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Clément Maupomé, orthoptiste · RPPS 10010199379</span>
+      <span>Les informations de ce site sont générales et ne remplacent pas une consultation.</span>
+    </div>
+  </footer>
+  <div class="rdv-bar">
+    <a class="btn btn-rdv" href="https://doctolib.fr/orthoptiste/toulouse/clement-maupome/booking?profile_skipped=true&amp;source=external_referral" target="_blank" rel="noopener">Prendre rendez-vous</a>
+    <a class="btn btn-line" href="tel:+33662293177" aria-label="Appeler le cabinet"><svg width="20" height="20" style="stroke:currentColor;fill:none;stroke-width:1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5h3.5l1.5 4.5-2.2 1.4a11 11 0 0 0 6.8 6.8l1.4-2.2 4.5 1.5V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></svg></a>
+  </div>
+  <script src="assets/main.js" defer></script>
 </body>
 </html>

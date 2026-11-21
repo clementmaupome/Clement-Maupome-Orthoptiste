@@ -85,6 +85,43 @@
     if (e.key === 'Escape') closeAll(null);
   });
 
+  /* ---------- Signes d'alerte : les petits yeux miment chaque signe ---------- */
+  var signs = Array.prototype.slice.call(document.querySelectorAll('.sign[data-mime]'));
+  if (signs.length && !reduce) {
+    var play = function (li) {
+      li.classList.remove('play'); void li.offsetWidth; li.classList.add('play');
+      clearTimeout(li._t); li._t = setTimeout(function () { li.classList.remove('play'); }, 2700);
+    };
+    signs.forEach(function (li) {
+      li.addEventListener('mouseenter', function () { play(li); });
+      li.addEventListener('focus', function () { play(li); });
+      li.addEventListener('touchstart', function () { play(li); }, { passive: true });
+    });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            io.disconnect();
+            signs.forEach(function (li, i) { setTimeout(function () { play(li); }, 400 + i * 1100); });
+          }
+        });
+      }, { threshold: 0.5 });
+      io.observe(signs[0].parentNode);
+    }
+  }
+
+  /* ---------- Dessin BéBé Vision : le regard va vers la carte la plus visible ---------- */
+  var bb = document.querySelector('.bb-wrap');
+  if (bb && !reduce) {
+    var bbPlay = function () { bb.classList.remove('play'); void bb.offsetWidth; bb.classList.add('play'); };
+    bb.addEventListener('mouseenter', bbPlay);
+    bb.addEventListener('touchstart', bbPlay, { passive: true });
+    if ('IntersectionObserver' in window) {
+      var bio = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { bio.disconnect(); setTimeout(bbPlay, 300); } }, { threshold: 0.6 });
+      bio.observe(bb);
+    }
+  }
+
   /* ---------- Carte : chargée seulement si on clique (pas de traceur tiers par défaut) ---------- */
   var mapBtn = document.querySelector('[data-load-map]');
   if (mapBtn) {
